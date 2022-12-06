@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <title>Kölista</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body class="container">
+        <header class="jumbotron text-center mt-3" style="background: rgb(255, 214,0); padding-bottom:15px; padding-top:15px;">
+		<!-- linear-gradient(to bottom, rgba(255, 214, 0, 1) 0%,rgba(125,185,232,0) 100%) -->
+ 
+            <h1>Kölista för handledning</h1>
+			<h3 id="rubrik"></h3>
+            <p class="lead">Lägg till er i listan genom att skriva en kort beskrivning med vad ni behöver hjälp med. 
+                Tryck sedan på knappen.</p>
+        </header>
+        <main>                   
+            <section id="birds">
+				<hr>
+                <h2>Aktuell kö:</h2>			
+                <br>
+                <ol id="list" class="list-group">
+
+                </ol>
+				<span id="tom"></span>
+				<hr>
+            </section>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <!-- <input type="text" id="msg" class="form-control">  -->
+                    <label for="msg">Beskriv vad du/ni vill ha hjälp med</label>
+                    <textarea id="msg" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="col-12 mt-2">
+                    <a href="#" class="btn btn-danger">Ställ dig i kö!</a>
+                </div>
+            </div>
+            
+        </main>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="public/scripts/client-script.js"></script>
+    </body>
+</html>
